@@ -1,7 +1,7 @@
 const Department = require('../Models/departments.model');
 const { ApiFeatures } = require('../Utills/ApiFeature');
 
-const createDepartment = (data) => Department.create(data);
+const createDepartment = (data) => Department.create;
 
 const getDepartments = (queryParams) => {
   const apiFeature = new ApiFeatures(Department.find({}), queryParams);
@@ -13,8 +13,9 @@ const getDepartments = (queryParams) => {
 
 const getDepartmentById = (id) => Department.findById(id);
 
-const updateDepartmentById = (id, updates) =>
+const updateDepartmentById = (id, updates) =>{
   Department.findByIdAndUpdate(id, updates, { new: true, runValidators: true });
+}
 
 const deleteAllDepartments = () => Department.deleteMany({});
 
