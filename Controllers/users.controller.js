@@ -1,4 +1,3 @@
-const { ApiError } = require("../Utills/ApiError");
 const userService = require("../Services/users.service");
 
 exports.createUser = async (req, res, next) => {
@@ -20,7 +19,7 @@ exports.loginUser = async (req, res, next) => {
   });
 };
 
-exports.getUserById = async (req, res) => {
+exports.getUserById = async (req, res) => { 
   console.log("HEEEELOOO");
   const user = await userService.getUserById(req.params.id);
   res.status(200).json({
