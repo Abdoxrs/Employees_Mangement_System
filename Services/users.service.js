@@ -1,7 +1,7 @@
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const User = require("../Models/users.model");
-const { ApiError } = require("../utilities/ApiError");
+const { ApiError } = require("../Utills/ApiError");
 
 const createUser = (data) => Users.create(data);
 

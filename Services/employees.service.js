@@ -1,5 +1,5 @@
 const Employee = require("../Models/employees.model");
-const { ApiFeatures } = require("../Utills/ApiFeature");
+const { ApiError } = require('../Utills/ApiError');
 
 const createEmployee = (data) => Employee.create(data);
 
